@@ -1,8 +1,8 @@
-ArduinoHondaOBD
+ArduinoChevyOBD
 ===========
 
-An arduino code that reads Honda OBD Protocol and translates it to ELM327 protocol.
-I use Torque app to read and display the data on my android phone (via bluetooth),
+An arduino code that reads GM OBD 1 Protocol and translates it to ELM327 protocol.
+I use Torque app to read and display the data on my android tablet (via usb),
 and a LCD (2x6) to display it on my car's dashboard.
 
 Please refer to the screenshots below.
@@ -17,20 +17,20 @@ Applications
 
 Supports
 --------
-* Honda ECU's before 2002
+* GM ECUs before 1996
 
 
 Files
 -----
-* hobd_uni - unified code for ELM bluetooth and LCD display with other improvements.
-* hobd_elm - implements Honda OBD to ELM OBD2 protocol (bluetooth) - not updated
-* hobd_lcd - implements Honda OBD to LCD display - not updated
+* gmobd_uni - unified code for ELM bluetooth and LCD display with other improvements.
+* gmobd_elm - implements GM OBD to ELM OBD2 protocol (bluetooth) - not updated
+* gmobd_lcd - implements GM OBD to LCD display - not updated
 * UNI_wiring.png - Unified wiring diagram for arduino UNO (compatible)
 
 
-Wiring for hobd_uni (Joined ELM and LCD codes)
+Wiring for gmobd_uni (Joined ELM and LCD codes)
 --------------------
-    Honda 3 Pin DLC           Arduino Uno
+    GM 3 Pin DLC           Arduino Uno
     Gnd --------------------- Gnd
     +12 --------------------- Vin
     K-line ------------------ Pin12
@@ -63,9 +63,9 @@ Wiring for hobd_uni (Joined ELM and LCD codes)
 
 ![Alt text](https://raw.github.com/kerpz/ArduinoHondaOBD/master/images/UNI_wiring.png "UNI Wiring Image")
 
-Wiring for hobd_elm (Deprecated use hobd_uni)
+Wiring for gmobd_elm (Deprecated use hobd_uni)
 --------------------
-    Honda 3 Pin DLC           Arduino Uno
+    GM 3 Pin DLC           Arduino Uno
     Gnd --------------------- Gnd
     +12 --------------------- Vin
     K-line ------------------ Pin12
@@ -75,9 +75,9 @@ Wiring for hobd_elm (Deprecated use hobd_uni)
     Tx ---------------------- Pin10
 
 
-Wiring for hobd_lcd (Deprecated use hobd_uni)
+Wiring for gmobd_lcd (Deprecated use hobd_uni)
 ---------------
-    Honda 3 Pin DLC           Arduino Uno
+    GMobd 3 Pin DLC           Arduino Uno
     Gnd --------------------- Gnd
     +12 --------------------- Vin
     K-line ------------------ Pin12
